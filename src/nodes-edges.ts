@@ -4,6 +4,7 @@ const response = await axios.get(process.env.URL_BACKEND ?? 'http://localhost:33
 
 const data = response.data;
 console.log(data)
+
 export const initialNodes = data.map((vertex: { value: any; color: any; finalTime: number; initialTime: number; }, id: any) => ({
   id: String(id),
   data: { label: vertex.value },
